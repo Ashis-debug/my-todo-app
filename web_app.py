@@ -10,9 +10,9 @@ def add_todo():
     fun.update_todos(todos)
 
 
-st.title("Welcome to the TODO Application")
+st.title("My Todo App")
 st.subheader("This is a minimal todo application")
-st.write("Let's explore the TODO app")
+st.write("This app will increase your productivity.")
 
 for index,todo in enumerate(todos):
     check = st.checkbox(todo, key=todo)
