@@ -5,9 +5,11 @@ todos = fun.get_todos()
 
 
 def add_todo():
-    new = st.session_state['new_todo'] + '\n'
-    todos.append(new)
-    fun.update_todos(todos)
+    new_todo = st.session_state['new_todo']
+    if new_todo:
+        todos.append(new_todo + '\n')
+        fun.update_todos(todos)
+        st.session_state['new_todo'] = ''  # Clear the text input box after adding the todo
 
 
 st.title("My Todo App")
